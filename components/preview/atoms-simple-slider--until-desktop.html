@@ -1,0 +1,59 @@
+
+
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/rotterdam.css">
+    <title>NSJ Styleguide</title>
+</head>
+<body>
+
+<style>
+    /* these styles are only for presentation purposes, and are not part of the o-simple-slider object */
+
+    .o-simple-slider__list {
+        --gap: 20px;
+        --num-items-visible: 3;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--gap);
+        list-style: none;
+        padding: 0;
+    }
+    .o-simple-slider__list li {
+        flex: 0 0 calc((100% - var(--gap) * (var(--num-items-visible) - 1)) / var(--num-items-visible));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: #00adf7;
+        block-size: 200px;
+    }
+
+</style>
+
+
+<div
+    class="o-simple-slider o-simple-slider--until-desktop" data-simple-slider="auto-play">
+    <ul class="o-simple-slider__list" data-simple-slider-list>
+            <li data-simple-slider-item>slide 1</li>
+            <li data-simple-slider-item>slide 2</li>
+            <li data-simple-slider-item>slide 3</li>
+            <li data-simple-slider-item>slide 4</li>
+            <li data-simple-slider-item>slide 5</li>
+            <li data-simple-slider-item>slide 6</li>
+            <li data-simple-slider-item>slide 7</li>
+    </ul>
+</div>
+
+
+<script type="module" src="/assets/bundle.js"></script>
+
+</body>
+</html>
+
